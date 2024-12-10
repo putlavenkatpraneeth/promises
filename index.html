@@ -25,7 +25,12 @@
     })
    })
     </script> -->
-    <script>
+
+
+
+
+
+    <!-- <script>
       function wakeup(callback) {
         setTimeout(() => {
           console.log("wakingup");
@@ -51,6 +56,57 @@
           hurryup();
         });
       });
-    </script>
+    </script> -->
+
+
+<script>
+    function place(callback){
+      setTimeout(() => {
+          console.log("place order");
+          callback()
+      }, 1000);
+    }
+    function prepare(callback){
+      setTimeout(() => {
+          console.log("prepare pizza");
+          callback()
+      }, 3000);
+    }
+    function bake(callback){
+      setTimeout(() => {
+          console.log("bake pizza");
+          callback()
+      }, 5000);
+    }
+    function pack(callback){
+      setTimeout(() => {
+          console.log("pack pizza");
+          callback()
+      }, 7000);
+    }
+    function deliver(callback){
+      setTimeout(() => {
+          console.log("deliver pizza");
+          
+      }, 1000);
+    }
+    place(()=>{
+     prepare(()=>{
+          bake(()=>{
+               pack(()=>{
+                    deliver()
+               })
+          })
+     })
+    })
+</script>
+
+
+
+
+
+
+
+
   </body>
 </html>
