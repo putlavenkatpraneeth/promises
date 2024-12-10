@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(val,callback){
+             callback(val+10)
+        }
+        function sub(val,callback){
+             callback(val-2)
+        }
+   add(10,(address)=>{
+    sub(address,(subress)=>{
+        console.log(subress);
+        
+    })
+   })
+    </script>
+</body>
+</html>
