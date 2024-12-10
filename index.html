@@ -1,24 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script>
+  </head>
+  <body>
+    <!-- <script>
         function add(val,callback){
              callback(val+10)
         }
         function sub(val,callback){
              callback(val-2)
         }
+        function mul(val,callback){
+             callback(val*3)
+        }
    add(10,(address)=>{
     sub(address,(subress)=>{
-        console.log(subress);
+      mul(subress,(mulres)=>{
+        console.log(mulres);
         
+      })
     })
    })
+    </script> -->
+    <script>
+      function wakeup(callback) {
+        setTimeout(() => {
+          console.log("wakingup");
+
+          callback();
+        }, 5000);
+      }
+      function freshup(callback) {
+        setTimeout(() => {
+          console.log("freshup");
+
+          callback();
+        }, 2000);
+      }
+      function hurryup(callback) {
+        setTimeout(() => {
+          console.log("hurryup");
+        }, 1000);
+      }
+
+      wakeup(() => {
+        freshup(() => {
+          hurryup();
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
